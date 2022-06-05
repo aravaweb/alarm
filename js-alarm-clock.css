@@ -1,0 +1,138 @@
+body {
+  background: #09112F;
+}
+#ctime, #tpick {
+  font-family: 'Poppins', sans-serif;
+}
+.header {
+  text-align: center;
+  font-weight: normal;
+  margin: 5px 0 10px 0;
+}
+
+/* (B) CURRENT TIME */
+#ctime {
+  margin: 0 auto;
+  max-width: 350px;
+  padding: 10px;
+  background: #0C1A46;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+#ctime .header {
+  color: yellow;
+}
+#ctime .square {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+}
+#ctime .digits {
+  font-size: 24px;
+  background: #242a54;
+  color: #fff;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+#ctime .text {
+  margin-top: 10px;
+  color: #ddd;
+}
+
+/* (C) TIME PICKER */
+#tpick {
+  margin: 0 auto;
+  max-width: 350px;
+  padding: 10px;
+  background: #181818;
+  white-space: nowrap;
+  border-radius: 20px;
+}
+#tpick-h, #tpick-m, #tpick-s {
+  display: inline-block;
+  width: 32%;
+  border-radius: 10px;
+}
+#tpick select {
+  box-sizing: padding-box;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 20px 0;
+  background: #121212;
+  color: #fff;
+}
+#tset, #treset {
+  box-sizing: padding-box;
+  width: 50%;
+  background: #3c55ff;
+  color: #fff;
+  padding: 10px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 20px;
+}
+#tset:disabled, #treset:disabled {
+  background: #202020;
+  color: #545454;
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #9F17D6;
+    text-align: center;
+}
+.mbtn {
+  color: white;
+  background: #9300FF;
+  text-align: center;
+  float: right;
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: .25s ease-in;
+
+}
+.mbtn:hover {
+  color: yellow;
+  background: #9300FF;
+  text-align: center;
+  float: right;
+  padding: 15px 25px;
+  border-radius: 40px;
+
+}
+.text {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+.textq {
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+.logo {
+  width: 100px;
+  margin-top: -6px;
+  margin-left: 30px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+
+}
+nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  background-color: #09112F;
+  justify-content: space-between;
+  margin: 0px;
+
+}
+.nav {
+  position: sticky;
+  top: 0;
+}
