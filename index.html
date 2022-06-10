@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      Arava Alarm
-    </title>
-    <link href="js-alarm-clock.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="js-alarm-clock.js"></script>
-  </head>
-  <body>
-    <header>
-    <nav>
-    <div><a href="#"><img src="aravathumb.png" class="logo"></a></div>
-    </nav>
-  </header>
-  <br>
-  <br>
-      <h1>Arava Alarm</h1>
-    <!-- (A) CURRENT TIME -->
-    <section id="content">
-    <div id="ctime">
-      <h1 class="header">The Current Time</h1>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js-alarm-clock.js"></script>
+	<title>Arava</title>
+</head>
+<body> 
+
+	<section id="screen">
+		<br><br><br><br><br><br><br><br><br><br>
+		<center> <section id="content">
+    <div class="clock">
       <div class="square">
-        <div class="digits" id="chr">00</div>
-        <div class="text">HR</div>
+        <div class="clock" id="chr">00</div>
       </div>
       <div class="square">
-        <div class="digits" id="cmin">00</div>
-        <div class="text">MIN</div>
+        <div class="clock" id="cmin">00</div>
       </div>
       <div class="square">
-        <div class="digits" id="csec">00</div>
-        <div class="text">SEC</div>
+        <div class="clock" id="csec">00</div>
       </div>
     </div>
+		<h1 id="demo"  class="date"></h1>
+		</center>
+	</section>
 
-    <!-- (B) SET ALARM -->
+	 <center>
+<details>
+ <summary><img src="images/arava.png" class="logo"></summary>
+<p>
+      <section class="alarm-sec">
+    <div>
     <div id="tpick">
       <h1 class="header">SET ALARM</h1>
       <div id="tpick-h"></div>
@@ -50,11 +46,58 @@
         <input type="button" value="Reset" id="treset" disabled/>
       </div>
     </div>
-    </section>
-    
-    <!-- (C) ALARM SOUND -->
+      </section>
+      </p>
+  </details>
+	</center>
+<!-- (C) ALARM SOUND -->
     <audio id="alarm-sound">
       <source src="wake-up-sound.mp3" type="audio/mp3">
     </audio>
-  </body>
+
+
+
+</body>
+<script type="text/javascript">
+	window.onload = function() {
+  clock();  
+    function clock() {
+    var now = new Date();
+    var TwentyFourHour = now.getHours();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var sec = now.getSeconds();
+    var mid = 'pm';
+    if (min < 10) {
+      min = "0" + min;
+    }
+    if (hour > 12) {
+      hour = hour - 12;
+    }    
+    if(hour==0){ 
+      hour=12;
+    }
+    if(TwentyFourHour < 12) {
+       mid = 'am';
+    }     
+  document.getElementById('currentTime').innerHTML =     hour+':'+min+':'+sec +' '+mid ;
+    setTimeout(clock, 1000);
+    }
+}
+		</script>
+		<script>
+let text;
+switch (new Date().getDay()) {
+  default:
+    text = "Working days";
+    break;
+  case 6:
+    text = "A beautiful Saturday";
+    break;
+  case 0:
+    text = "A peaceful Sunday";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
 </html>

@@ -1,6 +1,37 @@
 body {
-  background: #09112F;
+	background-image: url(../images/Profile.webp);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
 }
+.clock {
+	color: #A7BBC9;
+	font-size: 120px;
+	font-family: 'Bebas Neue', cursive;
+  margin-top: -30px;
+}
+.date {
+	color: #A7BBC9;
+	font-size: 25px;
+	font-family: 'Bebas Neue', cursive;
+	margin-top: -30px;
+}
+.logo {
+	width: 60px;
+	margin-top: 210px;
+	filter: opacity(50%);
+}
+.alarm-sec {
+	margin-top: 20%;
+}
+
+
+
+
+
+
+
+
 #ctime, #tpick {
   font-family: 'Poppins', sans-serif;
 }
@@ -11,34 +42,27 @@ body {
 }
 
 /* (B) CURRENT TIME */
-#ctime {
-  margin: 0 auto;
-  max-width: 350px;
-  padding: 10px;
-  background: #0C1A46;
-  text-align: center;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
+ 
 
-#ctime .header {
+ .header {
   color: yellow;
 }
-#ctime .square {
+ .square {
   display: inline-block;
   padding: 10px;
+  display: inline-flex;
   margin: 5px;
 }
-#ctime .digits {
+
+.digits {
   font-size: 24px;
-  background: #242a54;
-  color: #fff;
+  color: #000;
   padding: 20px 10px;
   border-radius: 10px;
 }
-#ctime .text {
+ .text {
   margin-top: 10px;
-  color: #ddd;
+  color: #fff;
 }
 
 /* (C) TIME PICKER */
@@ -46,7 +70,7 @@ body {
   margin: 0 auto;
   max-width: 350px;
   padding: 10px;
-  background: #181818;
+  background: #1f3346;
   white-space: nowrap;
   border-radius: 20px;
 }
@@ -67,7 +91,7 @@ body {
 #tset, #treset {
   box-sizing: padding-box;
   width: 50%;
-  background: #3c55ff;
+  background: #4b5251;
   color: #fff;
   padding: 10px;
   border: 0;
@@ -75,8 +99,8 @@ body {
   border-radius: 20px;
 }
 #tset:disabled, #treset:disabled {
-  background: #202020;
-  color: #545454;
+  background: #242b2c;
+  color: #888;
 }
 h1 {
     font-family: 'Poppins', sans-serif;
@@ -103,36 +127,6 @@ h1 {
   border-radius: 40px;
 
 }
-.text {
-  font-family: 'Poppins', sans-serif;
-  color: white;
-}
-.textq {
-  font-family: 'Poppins', sans-serif;
-  color: black;
-}
-.logo {
-  width: 100px;
-  margin-top: -6px;
-  margin-left: 30px;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-
-}
-nav {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  background-color: #09112F;
-  justify-content: space-between;
-  margin: 0px;
-
-}
-.nav {
-  position: sticky;
-  top: 0;
+details > summary:first-of-type {
+    list-style-type: none;
 }
