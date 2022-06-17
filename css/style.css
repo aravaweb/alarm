@@ -24,8 +24,33 @@ body {
 .alarm-sec {
 	margin-top: 20%;
 }
+header {
+  margin: 0 30px;
+  margin-bottom: -10px;
 
+}
+ul li {
+  display: inline-block;
+  margin-right: 34px;
+}
+ul li a {
+  color: #fff;
+  list-style: none;
+  font-size: 13px;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
 
+}
+ul li a:hover {
+  color: #584EFF;
+  list-style: none;
+  font-size: 13px;
+  text-decoration: none;
+
+}
+nav {
+  float: right;
+}
 
 
 
